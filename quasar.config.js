@@ -37,11 +37,7 @@ export default defineConfig((ctx) => {
         browser: ['es2022', 'firefox115', 'chrome115', 'safari14'],
         node: 'node20',
       },
-      env: {
-        API_URL: JSON.stringify(process.env.API_URL),
-        VUE_ROUTER_MODE: JSON.stringify(process.env.VUE_ROUTER_MODE)
-      },
-      vueRouterMode: 'history', // available values: 'hash', 'history'
+      vueRouterMode: 'hash', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -96,6 +92,7 @@ export default defineConfig((ctx) => {
       // https: true,
       port: 9001,
       open: true, // opens browser window automatically
+      historyApiFallback: true,
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework

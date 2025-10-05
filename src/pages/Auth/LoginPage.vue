@@ -86,7 +86,7 @@ const onLogin = async () => {
 
       showSuccess(`Welcome back, ${user?.name || 'User'}!`)
 
-      await router.push('/')
+      await router.push({ path: '/' })
     } else {
       throw new Error(res?.message || 'Login failed')
     }

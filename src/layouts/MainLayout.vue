@@ -157,12 +157,12 @@ function getContrastColor(bgColor) {
 }
 
 function gotoUrl(url) {
-  router.push(url)
+  router.push({ path: url })
 }
 
 const doLogout = () => {
   logout().then(() => {
-    router.push('/auth/login')
+    router.push({ path: '/login' })
     showSuccess("Logout successfully.")
   }).catch(err => {
     showError(err)
