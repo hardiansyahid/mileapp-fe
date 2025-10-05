@@ -160,7 +160,7 @@ function gotoUrl(url) {
   router.push(url)
 }
 
-function doLogout(){
+const doLogout = () => {
   logout().then(() => {
     router.push('/auth/login')
     showSuccess("Logout successfully.")

@@ -23,7 +23,7 @@ export function createTask(params) {
 }
 
 export function updateTask(id, params) {
-  return put(`task/${id}`, params)
+  return put(`task/update/${id}`, params)
 }
 
 export function deleteTask(id) {

@@ -91,6 +91,18 @@
         </template>
       </q-table>
     </div>
+
+    <task-modal-detail
+      v-if="showDetailTask"
+      v-model="showDetailTask"
+      :task="selectedTask"
+    />
+
+    <task-modal-update
+      v-if="showUpdateTask"
+      v-model="showUpdateTask"
+      :task="selectedTask"
+    />
   </div>
 </template>
 
@@ -99,6 +111,8 @@ import { ref, onMounted } from 'vue'
 import AddTaskDialog from '../Components/TaskModalCreate.vue'
 import { deleteTask, getTaskList } from 'src/libraries/api.js'
 import { showError, showSuccess } from 'src/libraries/helper.js'
+import TaskModalDetail from 'pages/Components/TaskModalDetail.vue'
+import TaskModalUpdate from 'pages/Components/TaskModalUpdate.vue'
 
 const columns = [
   { name: 'id', label: 'ID', field: 'id', align: 'left', sortable: true },
@@ -119,6 +133,9 @@ const pagination = ref({
 })
 
 const showAddTask = ref(false)
+const showUpdateTask = ref(false)
+const showDetailTask = ref(false)
+const selectedTask = ref(null)
 
 const fetchTasks = async () => {
   loading.value = true
@@ -154,11 +171,13 @@ const onSearch = () => {
 }
 
 const onDetail = (task) => {
-  console.log('Detail clicked', task)
+  selectedTask.value = task
+  showDetailTask.value = true
 }
 
 const onEdit = (task) => {
-  console.log('Edit clicked', task)
+  selectedTask.value = task
+  showUpdateTask.value = true
 }
 
 const onDelete = async (id) => {
