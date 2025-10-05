@@ -1,15 +1,8 @@
 {
-  "builds": [
-    { "src": "package.json", "use": "@vercel/static-build" }
-  ],
-  "build": {
-    "env": {
-      "VITE_API_URL": "https://mileapp-api.up.railway.app",
-      "VITE_APP_ENV": "production"
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  },
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
