@@ -162,8 +162,8 @@ function gotoUrl(url) {
 
 function doLogout(){
   logout().then(() => {
-    showSuccess("Logout successfully.")
     router.push('/auth/login')
+    showSuccess("Logout successfully.")
   }).catch(err => {
     showError(err)
     console.error(err)
