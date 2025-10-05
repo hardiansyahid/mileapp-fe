@@ -1,3 +1,19 @@
+## Requirement
+```
+node js         : 22.9.0
+quasar version  : 2
+```
+
+## Registered User
+```
+Registerd User
+username    : hardiansyah
+password    : 123
+
+username    : mileapp
+password    : 123
+```
+
 # MileAppHardi (mileapp-fe)
 
 Test By Hardiansyah

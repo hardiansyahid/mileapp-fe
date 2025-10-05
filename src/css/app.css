@@ -1,1 +1,6 @@
 /* app global css */
+.logo {
+    width: 50%;
+    height: auto;
+    max-width: 400px; /* optional */
+}

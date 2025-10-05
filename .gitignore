@@ -23,6 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
+.vscode
 .idea
 *.suo
 *.ntvs*
@@ -30,4 +31,5 @@ yarn-error.log*
 *.sln
 
 # local .env files
+.env
 .env.local*
