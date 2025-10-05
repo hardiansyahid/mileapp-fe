@@ -30,7 +30,7 @@ function handleError(error) {
     localStorage.removeItem('access_token')
 
     //@todo need akses router
-    window.location.href = '#/login'
+    window.location.href = '/#/'
 
     return Promise.reject('Unauthorized')
   }

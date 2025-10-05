@@ -104,20 +104,20 @@ const menuList = [
   {
     icon: 'settings',
     label: 'Settings',
-    url: '/',
+    url: '/page',
     separator: false
   },
   {
     icon: 'people',
     label: 'Account',
-    url: '/',
+    url: '/page',
     separator: false
   },
   {
     icon: 'help',
     iconColor: 'primary',
     label: 'Help',
-    url: '/',
+    url: '/page',
     separator: true
   }
 ]
@@ -162,7 +162,7 @@ function gotoUrl(url) {
 
 const doLogout = () => {
   logout().then(() => {
-    router.push({ path: '/login' })
+    router.push({ path: '/' })
     showSuccess("Logout successfully.")
   }).catch(err => {
     showError(err)
