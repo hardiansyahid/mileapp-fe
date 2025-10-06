@@ -38,8 +38,8 @@ export default defineConfig((ctx) => {
         node: 'node20',
       },
       env: {
-        API_URL: JSON.stringify(process.env.API_URL),
-        VUE_ROUTER_MODE: JSON.stringify(process.env.VUE_ROUTER_MODE)
+        API_URL: process.env.API_URL,
+        VUE_ROUTER_MODE: process.env.VUE_ROUTER_MODE
       },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       // vueRouterBase,
